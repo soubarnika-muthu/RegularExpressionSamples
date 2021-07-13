@@ -9,8 +9,8 @@ namespace PinCode
 {
     class PinCodeCheck
     {
-        string pattern = "^[0-9]{6}$";
-        string[] inputs = { "400088","A400088","400088B"};
+        string pattern = "^[0-9]{3}[ ]*[0-9]{3}$";
+        string[] inputs = { "400088","A400088","400088B","400 088"};
         public void ValidatingPinCode()
         {
             Regex regex = new Regex(pattern);
