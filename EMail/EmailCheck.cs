@@ -15,8 +15,8 @@ namespace EMail
 
     class EmailCheck
     {
-        string pattern = @"^[a-zA-z]{3}([\+ \- _ \.]*[a-zA-Z0-9]+)*[@][a-zA-z]+\.[a-z]{2,3}$";
-        string[] inputs = {"abc.xyz@bridzelabz.co","abc123@gmail.com","abc-100@yahoo.co" ,"abc@tvs",".abc@gmail.com","abc@.com"};
+        string pattern = @"^[a-zA-z]{3}([\+ \- _ \.]*[a-zA-Z0-9]+)*[@][a-zA-z0-9]+(\.[a-z]{2,3})*$";
+        string[] inputs = {"abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com","abc-100@abc.net","abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com","abc","abc.com","abc123@gmail.a" };
         public void ValidatingEmail()
         {
             Regex regex = new Regex(pattern);
