@@ -10,12 +10,13 @@ namespace EMail
     //UC1-Validating Mandatory part abc
     //UC2-Validating Mandatory second  part @
     //UC3-Validating Mandatory third  part ensure . after bridzelabz
+    ////UC4-Validating Optional part 
 
 
     class EmailCheck
     {
-        string pattern = @"^[a-zA-z]{3}[a-zA-Z0-9]*[@][a-zA-z]+\.[a-z]{2,3}$";
-        string[] inputs = {"abc@bridzelabz.co","abc@0mail.","abc@" ,"a@tvs"};
+        string pattern = @"^[a-zA-z]{3}([\+ \- _ \.]*[a-zA-Z0-9]+)*[@][a-zA-z]+\.[a-z]{2,3}$";
+        string[] inputs = {"abc.xyz@bridzelabz.co","abc123@gmail.com","abc-100@yahoo.co" ,"abc@tvs",".abc@gmail.com","abc@.com"};
         public void ValidatingEmail()
         {
             Regex regex = new Regex(pattern);
