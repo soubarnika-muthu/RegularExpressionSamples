@@ -8,10 +8,12 @@ using System.Text.RegularExpressions;
 namespace EMail
 {
     //UC1-Validating Mandatory part abc
+    //UC2-Validating Mandatory second  part @
+
     class EmailCheck
     {
-        string pattern = @"^[a-zA-z]{3}[a-zA-Z0-9]*$";
-        string[] inputs = {"abc","abcdf","a" ,"a1b"};
+        string pattern = @"^[a-zA-z]{3}[a-zA-Z0-9]*[@][a-zA-z]+$";
+        string[] inputs = {"abc@bridzelabz","abc@0mail","abc" ,"a@tvs"};
         public void ValidatingEmail()
         {
             Regex regex = new Regex(pattern);
